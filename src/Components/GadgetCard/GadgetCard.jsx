@@ -140,7 +140,7 @@ const GadgetCard = ({ products }) => {
                                     </figure>
                                     <div className="card-body">
                                         <h2 className="card-title">{item.product_title}</h2>
-                                        <p>Price: {item.price}</p>
+                                        <p className='text-lg font-semibold text-gray-400'>Price: {item.price}</p>
                                         <div className="card-actions">
                                             <NavLink to={`/viewDital/${item.product_id}`}>
                                                 <button className="btn rounded-full btn-outline text-[#9538E2]">View Details</button>

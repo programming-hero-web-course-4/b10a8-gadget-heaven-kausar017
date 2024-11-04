@@ -24,7 +24,7 @@ const Navbar = () => {
 
     return (
         <div className='container mx-auto pt-3'>
-            <div className={`navbar rounded-t-xl`} style={{ backgroundColor: bgColor }}>
+            <div className={`navbar rounded-t-xl px-10`} style={{ backgroundColor: bgColor }}>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

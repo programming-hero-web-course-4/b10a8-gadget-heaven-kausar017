@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Footer = props => {
     return (
         <div>
-            <footer className="footer-center bg-[gray] text-base-content rounded p-10 w-full py-20">
+            <footer className="footer-center bg-white text-base-content rounded p-10 w-full py-20">
                 <nav className='space-y-8'>
                     <h1 className='text-5xl font-bold'>Gadget Heaven</h1>
                     <p className='max-w-[1000px]'>At Gadget Heaven, we are dedicated to providing you with the latest and greatest in technology. Our mission is to enhance your shopping experience with an extensive selection of gadgets tailored to meet your needs.</p>
