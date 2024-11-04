@@ -1,152 +1,272 @@
 [
-    {
-      "product_id": "201",
-      "product_title": "iPhone 15 Pro",
-      "product_image": "https://i.postimg.cc/MHx6Hbcx/iphone-15-pro-gray.jpg",
-      "category": "Phones",
-      "price": 999.99,
-      "description": "The latest iPhone with cutting-edge features.",
-      "Specification": [
-        {"feature": "Display", "value": "6.1 inches OLED"},
-        {"feature": "Camera", "value": "48 MP Triple Lens"},
-        {"feature": "Battery Life", "value": "20 hours"}
-      ],
-      "availability": true,
-      "rating": 4.9
-    },
-    {
-      "product_id": "202",
-      "product_title": "MacBook Air M2",
-      "product_image": "https://i.postimg.cc/8PzGYCMy/ft-DV5jz4-RD7-Wd-Uea-Vu-Radb.jpg",
-      "category": "Laptops",
-      "price": 1099.99,
-      "description": "Lightweight MacBook with M2 chip and high performance.",
-      "Specification": [
-        {"feature": "Processor", "value": "Apple M2"},
-        {"feature": "RAM", "value": "8 GB"},
-        {"feature": "Storage", "value": "256 GB SSD"}
-      ],
-      "availability": true,
-      "rating": 4.8
-    },
-    {
-      "product_id": "203",
-      "product_title": "Apple Watch Series 8",
-      "product_image": "https://i.postimg.cc/mgcsb6dC/Apple-watch-OS-9-sleep-stages-220907-inline-jpg-large.jpg",
-      "category": "Smart Watches",
-      "price": 399.99,
-      "description": "Advanced health-tracking smartwatch.",
-      "Specification": [
-        {"feature": "Display", "value": "Always-On Retina"},
-        {"feature": "Battery Life", "value": "18 hours"},
-        {"feature": "Water Resistance", "value": "Up to 50 meters"}
-      ],
-      "availability": true,
-      "rating": 4.7
-    },
-    {
-      "product_id": "204",
-      "product_title": "MacBook Pro 14-inch",
-      "product_image": "https://i.postimg.cc/mrCW91Wr/macbook-pro-14-m2-max.jpg",
-      "category": "Laptops",
-      "price": 1999.99,
-      "description": "Powerful MacBook with M1 Pro chip for professionals.",
-      "Specification": [
-        {"feature": "Processor", "value": "Apple M1 Pro"},
-        {"feature": "RAM", "value": "16 GB"},
-        {"feature": "Storage", "value": "512 GB SSD"}
-      ],
-      "availability": false,
-      "rating": 4.9
-    },
-    {
-      "product_id": "205",
-      "product_title": "iPhone 14",
-      "product_image": "https://i.postimg.cc/GtMWRkGX/i-Phone-14-Pro-Space-Black-1138.jpg",
-      "category": "Phones",
-      "price": 799.99,
-      "description": "High-performing iPhone with excellent camera and battery life.",
-      "Specification": [
-        {"feature": "Display", "value": "6.1 inches Super Retina XDR"},
-        {"feature": "Battery Life", "value": "19 hours"},
-        {"feature": "Camera", "value": "12 MP Dual Lens"}
-      ],
-      "availability": true,
-      "rating": 4.6
-    },
-    {
-      "product_id": "206",
-      "product_title": "AirPods Pro 2nd Gen",
-      "product_image": "https://i.postimg.cc/Yq0c3sBZ/airpods-pro-2nd-gen-header-scaled-1-600x337.jpg",
-      "category": "Accessories",
-      "price": 249.99,
-      "description": "Noise-cancelling wireless earbuds with excellent sound quality.",
-      "Specification": [
-        {"feature": "Battery Life", "value": "6 hours"},
-        {"feature": "Noise Cancellation", "value": "Active"}
-      ],
-      "availability": true,
-      "rating": 4.7
-    },
-    {
-      "product_id": "207",
-      "product_title": "iPhone SE (2023)",
-      "product_image": "https://i.postimg.cc/3xGcfMSS/i-Phone-SE-3-2023-renders.jpg",
-      "category": "Phones",
-      "price": 499.99,
-      "description": "Affordable iPhone with great performance.",
-      "Specification": [
-        {"feature": "Display", "value": "4.7 inches LCD"},
-        {"feature": "Battery Life", "value": "15 hours"},
-        {"feature": "Camera", "value": "12 MP"}
-      ],
-      "availability": false,
-      "rating": 4.4
-    },
-    {
-      "product_id": "208",
-      "product_title": "MacBook Air 13-inch",
-      "product_image": "https://i.postimg.cc/MT63GnWN/111933-macbook-air-2018.jpg",
-      "category": "Laptops",
-      "price": 899.99,
-      "description": "Lightweight and powerful MacBook for everyday use.",
-      "Specification": [
-        {"feature": "Processor", "value": "Apple M1"},
-        {"feature": "RAM", "value": "8 GB"},
-        {"feature": "Storage", "value": "256 GB SSD"}
-      ],
-      "availability": true,
-      "rating": 4.5
-    },
-    {
-      "product_id": "209",
-      "product_title": "Apple Watch SE",
-      "product_image": "https://i.postimg.cc/Fz1Pjwkx/Apple-Watch-SE-2020-Silver-GPS-3805.jpg",
-      "category": "Smart Watches",
-      "price": 279.99,
-      "description": "Affordable Apple Watch with essential features.",
-      "Specification": [
-        {"feature": "Display", "value": "Retina"},
-        {"feature": "Battery Life", "value": "18 hours"},
-        {"feature": "GPS", "value": "Yes"}
-      ],
-      "availability": false,
-      "rating": 4.3
-    },
-    {
-      "product_id": "210",
-      "product_title": "iPhone 13 Mini",
-      "product_image": "https://i.postimg.cc/FFnC9FwC/iphone13-main.webp",
-      "category": "Phones",
-      "price": 699.99,
-      "description": "Compact iPhone with powerful performance.",
-      "Specification": [
-        {"feature": "Display", "value": "5.4 inches Super Retina XDR"},
-        {"feature": "Battery Life", "value": "17 hours"},
-        {"feature": "Camera", "value": "12 MP Dual Lens"}
-      ],
-      "availability": true,
-      "rating": 4.5
-    }
-  ]
-  
+  {
+    "product_id": "201",
+    "product_title": "iPhone 15 Pro",
+    "product_image": "https://i.postimg.cc/MHx6Hbcx/iphone-15-pro-gray.jpg",
+    "category": "Phones",
+    "price": 999.99,
+    "description": "The latest iPhone with cutting-edge features.",
+    "Specification": [
+      {
+        "feature": "Display",
+        "value": "6.1 inches OLED"
+      },
+      {
+        "feature": "Camera",
+        "value": "48 MP Triple Lens"
+      },
+      {
+        "feature": "Battery Life",
+        "value": "20 hours"
+      }
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "202",
+    "product_title": "MacBook Air M2",
+    "product_image": "https://i.postimg.cc/8PzGYCMy/ft-DV5jz4-RD7-Wd-Uea-Vu-Radb.jpg",
+    "category": "MacBook",
+    "price": 1099.99,
+    "description": "Lightweight MacBook with M2 chip and high performance.",
+    "Specification": [
+      {
+        "feature": "Processor",
+        "value": "Apple M2"
+      },
+      {
+        "feature": "RAM",
+        "value": "8 GB"
+      },
+      {
+        "feature": "Storage",
+        "value": "256 GB SSD"
+      }
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "203",
+    "product_title": "Apple Watch Series 8",
+    "product_image": "https://i.postimg.cc/mgcsb6dC/Apple-watch-OS-9-sleep-stages-220907-inline-jpg-large.jpg",
+    "category": "Smart Watches",
+    "price": 399.99,
+    "description": "Advanced health-tracking smartwatch.",
+    "Specification": [
+      {
+        "feature": "Display",
+        "value": "Always-On Retina"
+      },
+      {
+        "feature": "Battery Life",
+        "value": "18 hours"
+      },
+      {
+        "feature": "Water Resistance",
+        "value": "Up to 50 meters"
+      }
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "204",
+    "product_title": "MacBook Pro 14-inch",
+    "product_image": "https://i.postimg.cc/mrCW91Wr/macbook-pro-14-m2-max.jpg",
+    "category": "MacBook",
+    "price": 1999.99,
+    "description": "Powerful MacBook with M1 Pro chip for professionals.",
+    "Specification": [
+      {
+        "feature": "Processor",
+        "value": "Apple M1 Pro"
+      },
+      {
+        "feature": "RAM",
+        "value": "16 GB"
+      },
+      {
+        "feature": "Storage",
+        "value": "512 GB SSD"
+      }
+    ],
+    "availability": false,
+    "rating": 4.9
+  },
+  {
+    "product_id": "205",
+    "product_title": "iPhone 14",
+    "product_image": "https://i.postimg.cc/GtMWRkGX/i-Phone-14-Pro-Space-Black-1138.jpg",
+    "category": "Phones",
+    "price": 799.99,
+    "description": "High-performing iPhone with excellent camera and battery life.",
+    "Specification": [
+      {
+        "feature": "Display",
+        "value": "6.1 inches Super Retina XDR"
+      },
+      {
+        "feature": "Battery Life",
+        "value": "19 hours"
+      },
+      {
+        "feature": "Camera",
+        "value": "12 MP Dual Lens"
+      }
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "206",
+    "product_title": "AirPods Pro 2nd Gen",
+    "product_image": "https://i.postimg.cc/Yq0c3sBZ/airpods-pro-2nd-gen-header-scaled-1-600x337.jpg",
+    "category": "Accessories",
+    "price": 249.99,
+    "description": "Noise-cancelling wireless earbuds with excellent sound quality.",
+    "Specification": [
+      {
+        "feature": "Battery Life",
+        "value": "6 hours"
+      },
+      {
+        "feature": "Noise Cancellation",
+        "value": "Active"
+      }
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "207",
+    "product_title": "iPhone SE (2023)",
+    "product_image": "https://i.postimg.cc/3xGcfMSS/i-Phone-SE-3-2023-renders.jpg",
+    "category": "Phones",
+    "price": 499.99,
+    "description": "Affordable iPhone with great performance.",
+    "Specification": [
+      {
+        "feature": "Display",
+        "value": "4.7 inches LCD"
+      },
+      {
+        "feature": "Battery Life",
+        "value": "15 hours"
+      },
+      {
+        "feature": "Camera",
+        "value": "12 MP"
+      }
+    ],
+    "availability": false,
+    "rating": 4.4
+  },
+  {
+    "product_id": "208",
+    "product_title": "MacBook Air 13-inch",
+    "product_image": "https://i.postimg.cc/MT63GnWN/111933-macbook-air-2018.jpg",
+    "category": "MacBook",
+    "price": 899.99,
+    "description": "Lightweight and powerful MacBook for everyday use.",
+    "Specification": [
+      {
+        "feature": "Processor",
+        "value": "Apple M1"
+      },
+      {
+        "feature": "RAM",
+        "value": "8 GB"
+      },
+      {
+        "feature": "Storage",
+        "value": "256 GB SSD"
+      }
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "209",
+    "product_title": "Apple Watch SE",
+    "product_image": "https://i.postimg.cc/Fz1Pjwkx/Apple-Watch-SE-2020-Silver-GPS-3805.jpg",
+    "category": "Smart Watches",
+    "price": 279.99,
+    "description": "Affordable Apple Watch with essential features.",
+    "Specification": [
+      {
+        "feature": "Display",
+        "value": "Retina"
+      },
+      {
+        "feature": "Battery Life",
+        "value": "18 hours"
+      },
+      {
+        "feature": "GPS",
+        "value": "Yes"
+      }
+    ],
+    "availability": false,
+    "rating": 4.3
+  },
+  {
+    "product_id": "210",
+    "product_title": "iPhone 13 Mini",
+    "product_image": "https://i.postimg.cc/FFnC9FwC/iphone13-main.webp",
+    "category": "Phones",
+    "price": 699.99,
+    "description": "Compact iPhone with powerful performance.",
+    "Specification": [
+      {
+        "feature": "Display",
+        "value": "5.4 inches Super Retina XDR"
+      },
+      {
+        "feature": "Battery Life",
+        "value": "17 hours"
+      },
+      {
+        "feature": "Camera",
+        "value": "12 MP Dual Lens"
+      }
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "211",
+    "product_title": "Dell XPS 13",
+    "product_image": "https://i.postimg.cc/76B9ZDYN/notebook-xps-13-9345-t-gray-gallery-4.jpg",
+    "category": "Laptops",
+    "price": 1200,
+    "description": "Dell XPS 13, 13.3-inch laptop with high performance.",
+    "Specification": [
+      "Intel Core i7",
+      "16GB RAM",
+      "512GB SSD",
+      "13.3-inch Full HD Display",
+      "Windows 10"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "212",
+    "product_title": "HP Spectre x360",
+    "product_image": "https://i.postimg.cc/x1H6yWt0/HP-Spectre-x360-2024-featured-image-packshot-review-Recovered-1.jpg",
+    "category": "Laptops",
+    "price": 1300,
+    "description": "HP Spectre x360, a premium 2-in-1 convertible laptop.",
+    "Specification": [
+      "Intel Core i7",
+      "16GB RAM",
+      "1TB SSD",
+      "13.3-inch 4K UHD Display",
+      "Windows 10"
+    ],
+    "availability": true,
+    "rating": 4.7
+  }
+]

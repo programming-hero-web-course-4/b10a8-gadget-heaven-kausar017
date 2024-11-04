@@ -4,7 +4,7 @@ import LayOut from "../LayOut/LayOut";
 import Home from "../Home/Home";
 import Statistics from "../Statistics/Statistics";
 import DashBord from "../Dashbord/DashBord";
-import GadgetCard from "../GadgetCard/GadgetCard";
+import ViewDItals from "../ViewDitals/ViewDItals";
 
 const router = createBrowserRouter([
     {
@@ -15,7 +15,8 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('./product.json'),
+                loader: () => fetch('../product.json'),
+
             },
             {
                 path: '/statiks',
@@ -25,12 +26,14 @@ const router = createBrowserRouter([
                 path: '/dashbord',
                 element: <DashBord></DashBord>
             },
-            // {
-            //     path: '/gadget',
-            //     loader: ()=> fetch('product.json'),
-            //     element: <GadgetCard></GadgetCard>
-            // }
+            {
+                path: '/viewDital/:product_id',
+                element: <ViewDItals></ViewDItals>,
+                loader: () => fetch('../product.json'),
+            }
+
         ]
+
     },
 ]);
 

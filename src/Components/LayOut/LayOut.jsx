@@ -4,7 +4,7 @@ import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import { Outlet } from 'react-router-dom';
 
-const LayOut = props => {
+const LayOut = () => {
     return (
         <div className='bg-base-200 font-Family'>
             {/* Navbar */}

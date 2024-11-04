@@ -1,25 +1,24 @@
-import PropTypes from 'prop-types';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import { GiSelfLove } from 'react-icons/gi';
 import { TiShoppingCart } from 'react-icons/ti';
 import { useEffect, useState } from 'react';
 
-const Navbar = props => {
+const Navbar = () => {
     const location = useLocation();
     const [bgColor, setBgColor] = useState('#9538E2');
+    const [textColor, setTextColor] = useState('text-white');
 
     useEffect(() => {
-        // Change background color based on the current path
         if (location.pathname === '/') {
-            setBgColor('#9538E2'); // Home
-        } else if (location.pathname === '/statiks') {
-            setBgColor('white'); // Statistics
-        } else if (location.pathname === '/dashbord') {
-            setBgColor('white'); // Statistics
-        }
-        else {
-            setBgColor('#9538E2'); // Default color for other routes
+            setBgColor('#9538E2');
+            setTextColor('text-white');
+        } else if (location.pathname === '/statiks' || location.pathname === '/dashbord' || location.pathname.startsWith('/viewDital')) {
+            setBgColor('#F2F2F2');
+            setTextColor('text-black');
+        } else {
+            setBgColor('#9538E2');
+            setTextColor('text-white');
         }
     }, [location]);
 
@@ -47,16 +46,16 @@ const Navbar = props => {
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-30 p-2 shadow">
                             <li><NavLink to={'/'}>Home</NavLink></li>
                             <li><NavLink to={'/statiks'}>Statistics</NavLink></li>
-                            <li> <NavLink to={'/dashbord'}>Dashboard</NavLink></li>
+                            <li><NavLink to={'/dashbord'}>Dashboard</NavLink></li>
                         </ul>
                     </div>
-                    <Link to={'/'} className='text-xl font-bold text-white'>Gadget Heaven</Link>
+                    <Link to={'/'} className={`text-xl font-bold ${textColor}`}>Gadget Heaven</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal space-x-10 text-md font-bold">
-                        <li> <NavLink to={'/'}>Home</NavLink></li>
-                        <li> <NavLink to={'/statiks'}>Statistics</NavLink></li>
-                        <li> <NavLink to={'/dashbord'}>Dashboard</NavLink></li>
+                        <li><NavLink to={'/'}>Home</NavLink></li>
+                        <li><NavLink to={'/statiks'}>Statistics</NavLink></li>
+                        <li><NavLink to={'/dashbord'}>Dashboard</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end text-lg flex gap-3">
@@ -67,7 +66,5 @@ const Navbar = props => {
         </div>
     );
 };
-
-Navbar.propTypes = {};
 
 export default Navbar;

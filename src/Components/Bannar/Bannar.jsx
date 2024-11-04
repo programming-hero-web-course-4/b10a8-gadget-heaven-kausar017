@@ -18,7 +18,7 @@ const Bannar = () => {
             </div>
             <div className='flex flex-col items-center justify-center'>
                 <div className="card max-w-[1000px] shadow-2xl absolute">
-                    <figure className="px-4 py-4">
+                    <figure className="px-4 py-4 bg-white bg-opacity-20 rounded-xl">
                         <img
                             src={image}
                             alt="Shoes"
