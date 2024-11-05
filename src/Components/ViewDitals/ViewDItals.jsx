@@ -5,32 +5,40 @@ import { useLoaderData, useParams } from 'react-router-dom';
 
 import ReactStars from "react-rating-stars-component";
 import React from "react";
-import { render } from "react-dom";
+import { addProduct} from '../../Utiles';
 
 
 const ViewDItals = () => {
 
-
-    const ratingChanged = (newRating) => {
+    // rating react icon
+    const ratingChanged = ({ newRating }) => {
         console.log(newRating);
     };
 
     const { product_id } = useParams();
     const allProductData = useLoaderData();
 
-    // Default value with an empty array for Specification
+
     const [productData, setproductData] = useState({
         Specification: []
     });
-
-    // Destructuring properties from productData
     const { product_title, product_image, category, price, description, Specification, rating, availability } = productData;
 
-    // Fetch the product data based on product_id
+
     useEffect(() => {
         const singleData = allProductData.find(product => product.product_id == product_id);
-        setproductData(singleData || {}); // If singleData is undefined, set an empty object
+        setproductData(singleData || {});  
     }, [product_id, allProductData]);
+
+    // handal product btn click 
+
+    const handalProduct = (product) => {
+        addProduct(product)
+        
+    };
+        
+
+
 
     return (
         <div className='mt-5'>
@@ -49,7 +57,7 @@ const ViewDItals = () => {
                 <div className="px-5 py-3">
                     <h1 className='text-2xl font-bold'>{product_title}</h1>
                     <p className='text-lg'>Price: ${price}</p>
-                    <button className='btn btn-sm btn-outline rounded-full bg-[#309C34]'>
+                    <button className='btn btn-sm rounded-full bg-[#309C081A]'>
                         {availability ? 'In Stock' : 'Not Available'}
                     </button>
                     <p className='mt-4'>{description}</p>
@@ -74,18 +82,19 @@ const ViewDItals = () => {
                     <div>
                         <h5 className='text-xl font-semibold'>Ratig: </h5>
                         <div className='flex items-center gap-2'>
-                            <h4><ReactStars
-                                count={5}
-                                onChange={ratingChanged}
-                                size={24}
-                                activeColor="#ffd700"
-                            /></h4>
+                            <h4>
+                                <ReactStars
+                                    count={5}
+                                    onChange={ratingChanged}
+                                    size={24}
+                                    activeColor="#ffd700" />
+                            </h4>
                             <h3>{rating}</h3>
                         </div>
                     </div>
                     <div className='space-x-2'>
-                        <button className='btn btn-sm bg-[#9538E2] rounded-full outline-none text-white'>Add To Card <GiShoppingCart></GiShoppingCart> </button>
-                        <button className='border-2 p-2 rounded-full shadow-xl'><GiSelfLove></GiSelfLove> </button>
+                        <button  onClick={() => handalProduct(productData)} className='btn btn-sm bg-[#9538E2] rounded-full outline-none text-white'>Add To Card <GiShoppingCart></GiShoppingCart> </button>
+                        <button  onClick={() => handalFavarite(productData)} className='btn btn-sm border-2 p-2 rounded-full shadow-xl'><GiSelfLove></GiSelfLove> </button>
                     </div>
                 </div>
             </div>
@@ -94,7 +103,7 @@ const ViewDItals = () => {
 };
 
 ViewDItals.propTypes = {
-    allProductData: PropTypes.array
+    allProductData: PropTypes.array,
 };
 
 export default ViewDItals;

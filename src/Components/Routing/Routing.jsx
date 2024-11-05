@@ -5,6 +5,9 @@ import Home from "../Home/Home";
 import Statistics from "../Statistics/Statistics";
 import DashBord from "../Dashbord/DashBord";
 import ViewDItals from "../ViewDitals/ViewDItals";
+import Cart from "../card/Cart";
+import Wislist from "../Wislist/Wislist";
+
 
 const router = createBrowserRouter([
     {
@@ -16,7 +19,6 @@ const router = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>,
                 loader: () => fetch('../product.json'),
-
             },
             {
                 path: '/statiks',
@@ -24,7 +26,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/dashbord',
-                element: <DashBord></DashBord>
+                element: <DashBord></DashBord>,
+                loader: () => fetch('../product.json'),
             },
             {
                 path: '/viewDital/:product_id',
