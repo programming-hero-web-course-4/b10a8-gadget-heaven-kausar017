@@ -1,14 +1,13 @@
 
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+
 import { getAddHard, removedHard } from '../../Utiles/wislis';
 import { RxCross2 } from 'react-icons/rx';
 
 
 const Wislist = () => {
 
-    const { pathname } = useLocation();
 
 
     const [addHard, setAddHard] = useState([]);
@@ -47,6 +46,7 @@ const Wislist = () => {
                                 <h1 className='text-xl font-bold '>{add.product_title}</h1>
                                 <p className='text-gray-400'>{add.description}</p>
                                 <h4 className='font-bold'>Price: ${add.price}</h4>
+                                <button className='btn btn-sm bg-[#9538E2] text-white'>Add to Card</button>
                             </div>
 
                             <div onClick={() => handleRemoved(add.product_id)} className='absolute lg:right-20 md:right-5 bg-white text-red-600 border-2 p-2 rounded-full cursor-pointer'>

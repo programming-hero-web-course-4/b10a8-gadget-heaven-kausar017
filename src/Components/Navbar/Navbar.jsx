@@ -1,13 +1,11 @@
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import './Navbar.css';
-import { GiSelfLove } from 'react-icons/gi';
-import { TiShoppingCart } from 'react-icons/ti';
 import { useEffect, useState } from 'react';
 
 const Navbar = () => {
     const location = useLocation();
 
-    
+
     const [bgColor, setBgColor] = useState('#9538E2');
     const [textColor, setTextColor] = useState('text-white');
 
@@ -15,7 +13,8 @@ const Navbar = () => {
         if (location.pathname === '/') {
             setBgColor('#9538E2');
             setTextColor('text-white');
-        } else if (location.pathname === '/statiks' || location.pathname === '/dashbord' || location.pathname.startsWith('/viewDital')) {
+        } else if (location.pathname === '/statiks' || location.pathname === '/dashbord' || location.pathname.startsWith('/viewDital') ||
+            location.pathname === ('cart') || location.pathname) {
             setBgColor('#F2F2F2');
             setTextColor('text-black');
         } else {

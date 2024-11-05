@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import ErrorHandaling from "../Error/ErrorHandaling";
 import LayOut from "../LayOut/LayOut";
 import Home from "../Home/Home";
@@ -29,6 +29,10 @@ const router = createBrowserRouter([
                 element: <DashBord></DashBord>,
                 loader: () => fetch('../product.json'),
                 children: [
+                    {
+                        path: '',
+                        element: <Navigate to={'cart'}></Navigate>,
+                    },
                     {
                         path: 'cart',
                         element: <Cart></Cart>
