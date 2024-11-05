@@ -1,0 +1,8 @@
+.btn {
+    border-radius: 9999px; /* Ensure full roundness */
+    padding: 0.5rem 2rem; /* Adjust padding */
+}
+.active{
+    background-color: white;
+    color: black;
+}

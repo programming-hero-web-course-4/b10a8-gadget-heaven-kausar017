@@ -5,7 +5,8 @@ import { useLoaderData, useParams } from 'react-router-dom';
 
 import ReactStars from "react-rating-stars-component";
 import React from "react";
-import { addProduct} from '../../Utiles';
+import { addProduct } from '../../Utiles';
+import { addHard } from '../../Utiles/wislis';
 
 
 const ViewDItals = () => {
@@ -22,23 +23,24 @@ const ViewDItals = () => {
     const [productData, setproductData] = useState({
         Specification: []
     });
-    const { product_title, product_image, category, price, description, Specification, rating, availability } = productData;
+    const { product_title, product_image, price, description, Specification, rating, availability } = productData;
 
 
     useEffect(() => {
         const singleData = allProductData.find(product => product.product_id == product_id);
-        setproductData(singleData || {});  
+        setproductData(singleData || {});
     }, [product_id, allProductData]);
 
     // handal product btn click 
 
     const handalProduct = (product) => {
         addProduct(product)
-        
+
     };
-        
 
-
+    const handalHard= hard=> {
+        addHard(hard)
+    }
 
     return (
         <div className='mt-5'>
@@ -93,8 +95,8 @@ const ViewDItals = () => {
                         </div>
                     </div>
                     <div className='space-x-2'>
-                        <button  onClick={() => handalProduct(productData)} className='btn btn-sm bg-[#9538E2] rounded-full outline-none text-white'>Add To Card <GiShoppingCart></GiShoppingCart> </button>
-                        <button  onClick={() => handalFavarite(productData)} className='btn btn-sm border-2 p-2 rounded-full shadow-xl'><GiSelfLove></GiSelfLove> </button>
+                        <button onClick={() => handalProduct(productData)} className='btn btn-sm bg-[#9538E2] rounded-full outline-none text-white'>Add To Card <GiShoppingCart></GiShoppingCart> </button>
+                        <button onClick={() => handalHard(productData)} className='btn btn-sm border-2 p-2 rounded-full shadow-xl'><GiSelfLove></GiSelfLove> </button>
                     </div>
                 </div>
             </div>

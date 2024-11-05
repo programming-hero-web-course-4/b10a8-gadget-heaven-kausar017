@@ -28,6 +28,16 @@ const router = createBrowserRouter([
                 path: '/dashbord',
                 element: <DashBord></DashBord>,
                 loader: () => fetch('../product.json'),
+                children: [
+                    {
+                        path: 'cart',
+                        element: <Cart></Cart>
+                    },
+                    {
+                        path: 'wislist',
+                        element: <Wislist></Wislist>
+                    }
+                ]
             },
             {
                 path: '/viewDital/:product_id',

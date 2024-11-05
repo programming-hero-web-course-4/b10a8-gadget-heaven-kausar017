@@ -30,10 +30,10 @@ const GadgetCard = ({ products }) => {
 
             <div className="shadow-lg md:hidden">
                 <figure className="px-4 py-4 gap-3 flex flex-wrap">
-                    <button onClick={() => handleButtonClick('All')} className={`btn btn-sm shadow-xl rounded-full ${activeButton === 'All' ? 'text-white bg-[#9538E2]' : ''}`}>
+                    <button onClick={() => handleButtonClick('All')} className={`btn btn-sm shadow-xl rounded-full  ${activeButton === 'All' ? 'text-white bg-[#9538E2]' : ''}`}>
                         All Product
                     </button>
-                    <button onClick={() => handleButtonClick('Laptops')} className={`btn btn-sm shadow-xl rounded-full ${activeButton === 'Laptops' ? 'text-white bg-[#9538E2]' : ''}`}>
+                    <button onClick={() => handleButtonClick('Laptops')} className={`btn btn-sm shadow-xl rounded-full  w-[120px]${activeButton === 'Laptops' ? 'text-white bg-[#9538E2]' : ''}`}>
                         Laptops
                     </button>
                     <button onClick={() => handleButtonClick('Iphone')} className={`btn btn-sm shadow-xl rounded-full w-[120px] ${activeButton === 'Iphone' ? 'text-white bg-[#9538E2]' : ''}`}>
@@ -42,7 +42,7 @@ const GadgetCard = ({ products }) => {
                     <button onClick={() => handleButtonClick('Accessories')} className={`btn btn-sm shadow-xl rounded-full w-[120px] ${activeButton === 'Accessories' ? 'text-white bg-[#9538E2]' : ''}`}>
                         Accessories
                     </button>
-                    <button onClick={() => handleButtonClick('Smart Watches')} className={`btn btn-sm shadow-xl rounded-full w-[130px] ${activeButton === 'Smart Watches' ? 'text-white bg-[#9538E2]' : ''}`}>
+                    <button onClick={() => handleButtonClick('Smart Watches')} className={`btn btn-sm shadow-xl rounded-full  ${activeButton === 'Smart Watches' ? 'text-white bg-[#9538E2]' : ''}`}>
                         Smart Watches
                     </button>
                     <button onClick={() => handleButtonClick('MacBook')} className={`btn btn-sm shadow-xl rounded-full w-[120px] ${activeButton === 'MacBook' ? 'text-white bg-[#9538E2]' : ''}`}>
@@ -58,7 +58,7 @@ const GadgetCard = ({ products }) => {
                 <div className='col-span-2'>
                     <div className="card bg-base-100 rounded-md shadow-xl hidden md:block">
                         <figure className="px-4 py-4 flex flex-col max-md:flex-row gap-3">
-                            <button onClick={() => handleButtonClick('All')} className={`btn btn-sm rounded-full w-[120px] ${activeButton === 'All' ? 'text-white bg-[#9538E2]' : ''}`}>
+                            <button onClick={() => handleButtonClick('All')} className={`btn btn-sm rounded-full  ${activeButton === 'All' ? 'text-white bg-[#9538E2]' : ''}`}>
                                 All Product
                             </button>
                             <button onClick={() => handleButtonClick('Laptops')} className={`btn btn-sm rounded-full w-[120px] ${activeButton === 'Laptops' ? 'text-white bg-[#9538E2]' : ''}`}>
@@ -70,8 +70,8 @@ const GadgetCard = ({ products }) => {
                             <button onClick={() => handleButtonClick('Accessories')} className={`btn btn-sm rounded-full w-[120px] ${activeButton === 'Accessories' ? 'text-white bg-[#9538E2]' : ''}`}>
                                 Accessories
                             </button>
-                            <button onClick={() => handleButtonClick('Smart Watches')} className={`btn btn-sm rounded-full w-[130px] ${activeButton === 'Smart Watches' ? 'text-white bg-[#9538E2]' : ''}`}>
-                                Smart Watches
+                            <button onClick={() => handleButtonClick('Smart Watches')} className={`btn btn-sm rounded-full w-[120px] ${activeButton === 'Smart Watches' ? 'text-white bg-[#9538E2]' : ''}`}>
+                                Watches
                             </button>
                             <button onClick={() => handleButtonClick('MacBook')} className={`btn btn-sm rounded-full w-[120px] ${activeButton === 'MacBook' ? 'text-white bg-[#9538E2]' : ''}`}>
                                 MacBook
