@@ -77,7 +77,8 @@ const Cart = (props) => {
             </div>
 
             <div className='my-10 space-y-5 p-2 relative'>
-                {addProduct.map((add, index) => (
+                {
+                addProduct.map((add, index) => (
                     <div key={index} className='md:flex items-center gap-4 bg-white p-5 rounded-xl'>
                         <div>
                             <img className='max-w-[200px] rounded-xl' src={add.product_image} alt="" />

@@ -5,7 +5,6 @@ import { useLoaderData } from 'react-router-dom';
 const About = () => {
 
     const aboutUs = useLoaderData();
-    console.log(aboutUs.mission);
 
     return (
         <HelmetProvider>
@@ -33,22 +32,24 @@ const About = () => {
                             </div>
                         </div>
                         <div>
-                            <h1  className='text-4xl font-bold text-[#9538E2] shadow-xl'>Meet the Team:</h1>
-                            <div className='my-5'>
+                            <h1 className='text-4xl font-bold text-[#9538E2] shadow-xl'>Meet the Team:</h1>
+                            <div className='my-5 grid md:grid-cols-3 gap-5 justify-center px-2'>
                                 {
                                     data.team.map((tem, i) =>
                                         <div key={i}>
-                                            <div className="card card-compact bg-base-100 w-96 shadow-xl">
+                                            <div className="card card-compact bg-base-100 shadow-xl h-[600px] transition hover:scale-105 overflow-hidden">
                                                 <figure>
                                                     <img
-                                                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                                        className='p-3 rounded-xl h-[400px] w-full object-cover'
+                                                        src={tem.image}
                                                         alt="Shoes" />
                                                 </figure>
                                                 <div className="card-body">
-                                                    <h2 className="card-title">Shoes!</h2>
-                                                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                                                    <h2 className="card-title">Name: {tem.name}</h2>
+                                                    <h2 className='text-xl'><span className='font-bold'>Position:</span> {tem.position}</h2>
+                                                    <p className='text-gray-500 text-lg'><span className='font-bold'>Bio:</span> {tem.bio}</p>
                                                     <div className="card-actions justify-end">
-                                                        <button className="btn btn-primary">Buy Now</button>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -56,27 +57,39 @@ const About = () => {
                                     )
                                 }
                             </div>
+                            <div>
+                                <h1 className='text-4xl font-bold text-[#9538E2] shadow-xl px-2'>Features: </h1>
+
+                                {
+                                    data.features.map((fe, i) => <ul className='mt-3' key={i}>
+                                        <ol className='ml-3 font-bold text-gray-500'>{i + 1}. {fe}</ol>
+                                    </ul>)
+                                }
+
+                            </div>
+                            <div className='my-5 '>
+                                <h1 className='text-4xl font-bold text-[#9538E2] shadow-xl px-2'>Technologies Used</h1>
+                                <div className='flex gap-2'>
+                                    {
+                                        data.technologies_used.map((technolgy, i) =>
+                                            <div key={i} className='card w-96 my-5 flex flex-row items-center bg-gray-200'>
+                                                <div>
+                                                    <img className='w-[200px] p-3 h-[150px]' src={technolgy.logo} alt="" />
+                                                </div>
+                                                <div className='card-body'>{technolgy.name}</div>
+                                            </div>
+                                        )
+                                    }
+                                </div>
+                            </div>
                         </div>
                     </>)
                 }
 
                 <section className="py-10 px-5">
-                    <h2 className="text-2xl font-semibold">Meet the Team</h2>
-                    <div className="team-member">
-                        <h3 className="text-xl font-semibold">John Doe</h3>
-                        <p>Project Lead</p>
-                    </div>
-                    <div className="team-member">
-                        <h3 className="text-xl font-semibold">Jane Smith</h3>
-                        <p>Frontend Developer</p>
-                    </div>
-                </section>
-
-                <section className="py-10 px-5">
                     <h2 className="text-2xl font-semibold">Technologies Used</h2>
                     <p>React, Node.js, MongoDB, Express</p>
                 </section>
-
                 <section className="py-10 px-5 text-center">
                     <button className="btn bg-[#9538E2] text-white rounded-full">Contact Us</button>
                 </section>

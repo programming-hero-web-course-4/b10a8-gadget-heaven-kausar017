@@ -19,7 +19,6 @@ const ViewDItals = () => {
     const { product_id } = useParams();
 
     const allProductData = useLoaderData();
-    // console.log(allProductData);
     
 
     const [productData, setproductData] = useState({
@@ -89,7 +88,7 @@ const ViewDItals = () => {
                         <h5 className='text-xl font-semibold'>Ratig: </h5>
                         <div className='flex items-center gap-2'>
                             <h4>
-                                <ReactStars
+                                <ReactStars data={rating}
                                     count={5}
                                     onChange={ratingChanged}
                                     size={24}

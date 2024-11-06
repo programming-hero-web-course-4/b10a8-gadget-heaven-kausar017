@@ -7,19 +7,19 @@
                 "name": "John Doe",
                 "position": "Project Lead",
                 "bio": "John has over 10 years of experience in project management and leads our team with a vision of excellence.",
-                "image": "https://example.com/images/john_doe.jpg"
+                "image": "https://i.postimg.cc/YSkwVSkj/494-4947709-john-doe-programmer-hd-png-download.png"
             },
             {
                 "name": "Jane Smith",
                 "position": "Frontend Developer",
                 "bio": "Jane specializes in creating beautiful and user-friendly interfaces with React.",
-                "image": "https://example.com/images/jane_smith.jpg"
+                "image": "https://i.postimg.cc/MGD888K5/team.jpg"
             },
             {
                 "name": "Sam Wilson",
                 "position": "Backend Developer",
                 "bio": "Sam is a Node.js expert who ensures our server-side code is efficient and secure.",
-                "image": "https://example.com/images/sam_wilson.jpg"
+                "image": "https://i.postimg.cc/5tGDJNWw/member-sam-w-667x1000-1-667x800.jpg"
             }
         ],
         "features": [
@@ -32,19 +32,19 @@
         "technologies_used": [
             {
                 "name": "React",
-                "logo": "https://example.com/logos/react.png"
+                "logo": "https://i.postimg.cc/5yqC10Ty/image.png"
             },
             {
                 "name": "Node.js",
-                "logo": "https://example.com/logos/nodejs.png"
+                "logo": "https://i.postimg.cc/ht37KNyL/image.png"
             },
             {
                 "name": "MongoDB",
-                "logo": "https://example.com/logos/mongodb.png"
+                "logo": "https://i.postimg.cc/bJ1GHrzg/image.png"
             },
             {
                 "name": "Express",
-                "logo": "https://example.com/logos/express.png"
+                "logo": "https://i.postimg.cc/HnHrSmng/360-F-347429829-Lh-Bd6f-IJYz-WZXg21-Hf-DBm7-Ze38ak-G9-DS.jpg"
             }
         ]
     }
