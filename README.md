@@ -2,11 +2,10 @@
 * Gadget Heaven - E-commerce for Cutting-Edge Gadgets
 
 ## Live Website Link:
-
 * https://gedgat-heven-a8.netlify.app/
 
 # Requirement Document Link:
-* 
+*  file:///E:/ALL%20[ASSINMENT]/B10-A8-gadget-heaven/Batch-10_Assignment-08.pdf
 
 # React Fundamentals Used:
 
