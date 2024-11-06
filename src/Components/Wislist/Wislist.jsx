@@ -11,8 +11,6 @@ const Wislist = () => {
 
 
     const [addHard, setAddHard] = useState([]);
-    console.log(addHard);
-
     useEffect(() => {
         const addingProduts = getAddHard();
         setAddHard(addingProduts)

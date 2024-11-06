@@ -1,45 +1,35 @@
-// get all product frome localStorag
 
+// index.js
 import toast from "react-hot-toast";
 
 const getAllProduct = () => {
-    const all = localStorage.getItem('produsctData')
+    const all = localStorage.getItem('produsctsData');
     if (all) {
-        const allProduct = JSON.parse(all)
-        console.log(allProduct);
-        return allProduct
+        const allProduct = JSON.parse(all);
+        return allProduct;
     } else {
         console.log([]);
-
-        return []
+        return [];
     }
+};
 
-}
-// add a product to tahe local storage
-
-
-const addProduct = product => {
-    // get all previuasly saved product data 
-
-    const products = getAllProduct()
-    const isExits = products.find(item => item.product_id == product.product_id)
+const addProduct = (product) => {
+    
+    const products = getAllProduct();
+    const isExits = products.find(item => item.product_id == product.product_id);
     if (isExits) {
-        return toast.error('Product Allrady Added')
+        return toast.error('Product Already Added');
     }
-    products.push(product)
-    localStorage.setItem('produsctData', JSON.stringify(products))
+    products.push(product);
+    localStorage.setItem('produsctsData', JSON.stringify(products));
     toast.success('Successfully added!');
-}
+};
 
-
-
-// reamove product to the loca lstorage
 const removdProduct = (id) => {
-    const products = getAllProduct()
+    const products = getAllProduct();
     const remaind = products.filter(product => product.product_id != id);
-    localStorage.setItem('produsctData', JSON.stringify(remaind))
+    localStorage.setItem('produsctsData', JSON.stringify(remaind));
     toast.success('Successfully Removed!');
-}
+};
 
-
-export { addProduct, getAllProduct, removdProduct };
+export { getAllProduct, addProduct, removdProduct };

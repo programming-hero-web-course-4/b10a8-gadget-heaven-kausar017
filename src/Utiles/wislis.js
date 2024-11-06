@@ -1,20 +1,21 @@
 // index.js
+
 import toast from "react-hot-toast";
 
 const getAddHard = () => {
     const all = localStorage.getItem('hardData');
     if (all) {
         const allProduct = JSON.parse(all);
-        console.log(allProduct);
         return allProduct;
     } else {
-        console.log([]);
         return [];
     }
 };
 
 const addHard = (product) => {
     const products = getAddHard();
+    console.log(products);
+    
     const isExits = products.find(item => item.product_id == product.product_id);
     if (isExits) {
         return toast.error('Product Already Added');

@@ -7,6 +7,7 @@ import DashBord from "../Dashbord/DashBord";
 import ViewDItals from "../ViewDitals/ViewDItals";
 import Cart from "../card/Cart";
 import Wislist from "../Wislist/Wislist";
+import About from "../About/About";
 
 
 const router = createBrowserRouter([
@@ -22,7 +23,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/statiks',
-                element: <Statistics></Statistics>
+                element: <Statistics></Statistics>,
+                loader: () => fetch('../product.json'),
             },
             {
                 path: '/dashbord',
@@ -47,6 +49,10 @@ const router = createBrowserRouter([
                 path: '/viewDital/:product_id',
                 element: <ViewDItals></ViewDItals>,
                 loader: () => fetch('../product.json'),
+            },
+            {
+                path: '/aobut',
+                element: <About></About>
             }
 
         ]

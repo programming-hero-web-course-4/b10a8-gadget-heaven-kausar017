@@ -1,9 +1,17 @@
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import { useEffect, useState } from 'react';
+import { getAllProduct } from '../../Utiles';
+import { getAddHard } from '../../Utiles/wislis';
 
 const Navbar = () => {
     const location = useLocation();
+
+    const length = getAllProduct();
+
+    const lengthe = getAddHard();
+
+
 
 
     const [bgColor, setBgColor] = useState('#9538E2');
@@ -14,7 +22,7 @@ const Navbar = () => {
             setBgColor('#9538E2');
             setTextColor('text-white');
         } else if (location.pathname === '/statiks' || location.pathname === '/dashbord' || location.pathname.startsWith('/viewDital') ||
-            location.pathname === ('cart') || location.pathname) {
+            location.pathname === ('cart') || location.pathname === '/aobut' || location.pathname) {
             setBgColor('#F2F2F2');
             setTextColor('text-black');
         } else {
@@ -25,7 +33,7 @@ const Navbar = () => {
 
     return (
         <div className='container mx-auto pt-3'>
-            <div className={`navbar rounded-t-xl px-10`} style={{ backgroundColor: bgColor }}>
+            <div className={`navbar rounded-t-xl`} style={{ backgroundColor: bgColor }}>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,6 +56,7 @@ const Navbar = () => {
                             <li><NavLink to={'/'}>Home</NavLink></li>
                             <li><NavLink to={'/statiks'}>Statistics</NavLink></li>
                             <li><NavLink to={'/dashbord'}>Dashboard</NavLink></li>
+                            <li><NavLink to={'/aobut'}>About</NavLink></li>
                         </ul>
                     </div>
                     <Link to={'/'} className={`text-xl font-bold ${textColor}`}>Gadget Heaven</Link>
@@ -57,6 +66,7 @@ const Navbar = () => {
                         <li><NavLink to={'/'}>Home</NavLink></li>
                         <li><NavLink to={'/statiks'}>Statistics</NavLink></li>
                         <li><NavLink to={'/dashbord'}>Dashboard</NavLink></li>
+                        <li><NavLink to={'/aobut'}>About</NavLink></li>
                     </ul>
                 </div>
 
@@ -80,7 +90,7 @@ const Navbar = () => {
                                     />
                                 </svg>
 
-                                <span className="badge badge-sm indicator-item">0</span>
+                                <span className="badge badge-sm indicator-item">{length.length}</span>
                             </div>
                         </div>
                         <div
@@ -116,7 +126,7 @@ const Navbar = () => {
                                 </svg>
 
 
-                                <span className="badge badge-sm indicator-item">0</span>
+                                <span className="badge badge-sm indicator-item">{lengthe.length}</span>
                             </div>
                         </div>
                         <div

@@ -17,12 +17,16 @@ const ViewDItals = () => {
     };
 
     const { product_id } = useParams();
-    const allProductData = useLoaderData();
 
+    const allProductData = useLoaderData();
+    // console.log(allProductData);
+    
 
     const [productData, setproductData] = useState({
         Specification: []
+        
     });
+
     const { product_title, product_image, price, description, Specification, rating, availability } = productData;
 
 
