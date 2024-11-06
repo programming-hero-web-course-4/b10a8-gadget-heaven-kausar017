@@ -9,7 +9,8 @@ import { FcApproval } from 'react-icons/fc';
 const Cart = (props) => {
     const [addProduct, setAddProduct] = useState([]);
     const [showModal, setShowModal] = useState(false);
-    const [isPurchaseDisabled, setIsPurchaseDisabled] = useState(false); // Disabled state for the button
+    
+    const [isPurchaseDisabled, setIsPurchaseDisabled] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -44,7 +45,7 @@ const Cart = (props) => {
             });
         } else {
             setShowModal(true);
-            setIsPurchaseDisabled(true); // Disable the purchase button
+            setIsPurchaseDisabled(true); 
         }
     };
 
@@ -68,7 +69,7 @@ const Cart = (props) => {
                         </button>
                         <button
                             onClick={handlePurchaseClick}
-                            disabled={isPurchaseDisabled} // Disable condition
+                            disabled={isPurchaseDisabled}
                             className={`btn ${isPurchaseDisabled ? 'bg-gray-400' : 'bg-[#9538E2]'} text-white rounded-full text-lg`}>
                             Purchase
                         </button>

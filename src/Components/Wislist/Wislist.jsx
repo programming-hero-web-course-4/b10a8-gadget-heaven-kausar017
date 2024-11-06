@@ -1,5 +1,4 @@
 
-import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
 import { getAddHard, removedHard } from '../../Utiles/wislis';
@@ -7,8 +6,6 @@ import { RxCross2 } from 'react-icons/rx';
 
 
 const Wislist = () => {
-
-
 
     const [addHard, setAddHard] = useState([]);
     useEffect(() => {
@@ -21,8 +18,6 @@ const Wislist = () => {
         const updatedProducts = getAddHard();
         setAddHard(updatedProducts);
     };
-
-
 
 
     return (
