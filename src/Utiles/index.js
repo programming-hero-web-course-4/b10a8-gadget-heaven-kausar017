@@ -8,7 +8,6 @@ const getAllProduct = () => {
         const allProduct = JSON.parse(all);
         return allProduct;
     } else {
-        console.log([]);
         return [];
     }
 };

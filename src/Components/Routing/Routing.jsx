@@ -52,7 +52,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/aobut',
-                element: <About></About>
+                element: <About></About>,
+                loader: ()=> fetch('../aboutUs.json')
             }
 
         ]
