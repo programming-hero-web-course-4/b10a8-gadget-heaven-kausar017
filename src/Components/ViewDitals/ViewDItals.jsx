@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { GiSelfLove, GiShoppingCart } from 'react-icons/gi';
 import { useLoaderData, useParams } from 'react-router-dom';
-
-import ReactStars from "react-rating-stars-component";
+import Rating from "react-rating";
 import React from "react";
 import { addProduct } from '../../Utiles';
 import { addHard } from '../../Utiles/wislis';
@@ -11,19 +10,15 @@ import { addHard } from '../../Utiles/wislis';
 
 const ViewDItals = () => {
 
-    // rating react icon
-    const ratingChanged = ({ newRating }) => {
-        console.log(newRating);
-    };
 
     const { product_id } = useParams();
 
     const allProductData = useLoaderData();
-    
+
 
     const [productData, setproductData] = useState({
         Specification: []
-        
+
     });
 
     const { product_title, product_image, price, description, Specification, rating, availability } = productData;
@@ -35,13 +30,12 @@ const ViewDItals = () => {
     }, [product_id, allProductData]);
 
     // handal product btn click 
-
     const handalProduct = (product) => {
         addProduct(product)
 
     };
 
-    const handalHard= hard=> {
+    const handalHard = hard => {
         addHard(hard)
     }
 
@@ -88,11 +82,13 @@ const ViewDItals = () => {
                         <h5 className='text-xl font-semibold'>Ratig: </h5>
                         <div className='flex items-center gap-2'>
                             <h4>
-                                <ReactStars data={rating}
-                                    count={5}
-                                    onChange={ratingChanged}
-                                    size={24}
-                                    activeColor="#ffd700" />
+                                <Rating
+                                    initialRating={rating}
+                                    readonly={false}
+                                    emptySymbol={<span className="text-white text-2xl">★</span>} 
+                                    fullSymbol={<span className="text-red-500 text-2xl">★</span>} 
+                                    onHover={(value) => console.log("Hovered over:", value)} 
+                                />
                             </h4>
                             <h3>{rating}</h3>
                         </div>

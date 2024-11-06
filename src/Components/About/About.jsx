@@ -69,10 +69,10 @@ const About = () => {
                             </div>
                             <div className='my-5 '>
                                 <h1 className='text-4xl font-bold text-[#9538E2] shadow-xl px-2'>Technologies Used</h1>
-                                <div className='flex gap-2'>
+                                <div className='grid lg:grid-cols-4 gap-2 px-2'>
                                     {
                                         data.technologies_used.map((technolgy, i) =>
-                                            <div key={i} className='card w-96 my-5 flex flex-row items-center bg-gray-200'>
+                                            <div key={i} className='card my-5 flex flex-row items-center bg-gray-200'>
                                                 <div>
                                                     <img className='w-[200px] p-3 h-[150px]' src={technolgy.logo} alt="" />
                                                 </div>
@@ -85,11 +85,6 @@ const About = () => {
                         </div>
                     </>)
                 }
-
-                <section className="py-10 px-5">
-                    <h2 className="text-2xl font-semibold">Technologies Used</h2>
-                    <p>React, Node.js, MongoDB, Express</p>
-                </section>
                 <section className="py-10 px-5 text-center">
                     <button className="btn bg-[#9538E2] text-white rounded-full">Contact Us</button>
                 </section>
